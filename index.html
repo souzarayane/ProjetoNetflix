@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Netflix</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="center">
+            <div class="header-left">
+                <a href="#"><img src="/assets/logo_netflix.png" alt="Netflix"></a>
+                <div class="menu-header">
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Séries</a></li>
+                        <li><a href="#">Filmes</a></li>
+                        <li><a href="#">Adicionados Recentemente</a></li>
+                        <li><a href="#">Minha Lista</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <a href="#">Infantil</a>
+                <i class="fas fa-gift"></i>
+                <div class="notifications">
+                    <div class="circle-notification">
+                        <span>10</span>
+                    </div>
+                    <i class="fas fa-bell"></i>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <section class="destaque">
+
+        <video autoplay muted loop id="video-destaque">
+            <source src="/assets/Saint Seiya_ Os Cavaleiros do Zodíaco _ Trailer oficial _ Netflix.mp4">
+            Seu navegador não suporta vídeo no formato HTML5.
+        </video>
+
+        <div class="overlay"></div>
+        <div class="texto-destaque">
+            <h2>Os Cavaleiros do Zodiáco</h2>
+            <h3>Assista a 1º temporada completa agora.</h3>
+            <p>Um grupo de guerreiros em armaduras mágicas juram
+                defender a reencarnação da deusa Atena contra as forças
+                malignas e levá-la de volta para casa.</p>
+            <br>
+            <a href="#"><i class="fas fa-play"></i> Assistir</a>
+            <a href="#"><i class="fas fa-plus"></i> Minha lista</a>
+            <a href="#"><i class="fas fa-info-circle"></i> Mais informações</a>
+        </div>
+    </section>
+
+    <section class="vitrine">
+        <div class="vitrine-flex">
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(/assets/arrow.jpg);"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(/assets/suits.jpeg);"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(/assets/peaky.jpg);"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(/assets/stranger.jpg);"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(/assets/TWD.jpg);"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(/assets/vikings.jpg);"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/jquery.js"></script>
+    <script src="/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script>
+        $('.vitrine-flex').slick({
+            dots: false,
+            arrows: false,
+            infinite: false,
+            centerMode: false,
+            speed: 1000,
+            slidesToShow: 6,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+
+        $('.vitrine-wraper').hover(function () {
+            $(this).css('z-index', '0');
+        })
+    </script>
+</body>
+
+</html>
